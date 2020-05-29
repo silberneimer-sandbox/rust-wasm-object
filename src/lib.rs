@@ -1,7 +1,19 @@
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
+use wasm_bindgen::prelude::*;
+
+#[wasm_bindgen]
+#[derive(Debug)]
+pub struct Point {
+    x: i32,
+    y: i32,
+}
+
+#[wasm_bindgen]
+impl Point {
+
+    pub fn zero() -> Point {
+        Point {
+            x: 0,
+            y: 0
+        }
     }
 }
