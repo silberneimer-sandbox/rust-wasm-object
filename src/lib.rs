@@ -2,18 +2,16 @@ use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 #[derive(Debug)]
-pub struct Point {
-    x: i32,
-    y: i32,
+pub struct SomeStructure {
+    any_property: i32
 }
 
 #[wasm_bindgen]
-impl Point {
+impl SomeStructure {
 
-    pub fn zero() -> Point {
-        Point {
-            x: 0,
-            y: 0
+    pub fn new() -> SomeStructure {
+        SomeStructure {
+            any_property: 0
         }
     }
 }
